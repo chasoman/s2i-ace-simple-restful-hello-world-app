@@ -5,4 +5,4 @@
 -s file:///home/centos/data/s2i-ace-simple-restful-hello-world-app/scripts \
 /home/centos/data/s2i-ace-simple-restful-hello-world-app/src \
 chasoman/ace:latest \
-chasoman/ace/s2i-ace-simple-restful-hello-world-app:v1.0
+ace/s2i/simple-restful-hello-world-app:v1.0

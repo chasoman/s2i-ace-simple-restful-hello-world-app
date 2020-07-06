@@ -9,4 +9,4 @@ if [ -z "$MQSI_VERSION" ]; then
 fi
 
 # build the application bar
-mqsicreatebar -data /home/aceuser/src -b /home/aceuser/src/simple-restful-helloworld-app.bar -cleanBuild -a SimpleRestFulHelloWorldApp
+mqsipackagebar -a /home/aceuser/src/simple-restful-helloworld-app.bar -w /home/aceuser/src -k SimpleRestFulHelloWorldApp

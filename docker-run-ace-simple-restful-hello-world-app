@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#chasoman: This script creats a running container from the base s2i image
+docker run \
+   --name aceserver-001 \ 
+   --env LICENSE=accept \
+   --env ACE_SERVER_NAME=ACESERVER \
+   "ace/s2i/simple-restful-hello-world-app:V1.0"
