@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Attention this file should be in your workspace.
+# i.e. one folder higher than the application folders.
+
+# set the mqsi environment
+if [ -z "$MQSI_VERSION" ]; then
+  source /home/ec2-user/ace-11.0.0.7/server/bin/mqsiprofile
+fi
+
+# deploy the application bar
+mqsideploy -i localhost -p 7600 -a simple-restful-helloworld-app.bar -e ACE_SERVER

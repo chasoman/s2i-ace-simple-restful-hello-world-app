@@ -1,0 +1,8 @@
+#!/bin/bash
+
+/home/centos/data/source2image/s2i build \
+-d /home/aceuser \
+-s file:///home/centos/data/s2i-ace-simple-restful-hello-world-app/scripts \
+/home/centos/data/s2i-ace-simple-restful-hello-world-app/src \
+chasoman/ace:latest \
+chasoman/ace/s2i-ace-simple-restful-hello-world-app:v1.0

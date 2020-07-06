@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Attention this file should be in your workspace.
+# i.e. one folder higher than the application folders.
+
+# set the mqsi environment
+if [ -z "$MQSI_VERSION" ]; then
+  source /home/ec2-user/ace-11.0.0.7/server/bin/mqsiprofile
+fi
+
+# build the application bar
+mqsicreatebar -data . -b simple-restful-helloworld-app.bar -cleanBuild -a SimpleRestFulHelloWorldApp

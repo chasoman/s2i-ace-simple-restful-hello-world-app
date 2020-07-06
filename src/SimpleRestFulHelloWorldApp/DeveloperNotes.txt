@@ -1,0 +1,34 @@
+--# [STEP 1]
+--#  Create a simple ACE flow.
+
+--# [STEP 1a]
+--#  How do you get the query parameters?
+--#  Output from debug mode is -
+LocalEnvironment
+	Destination
+			HTTP
+					RequestIdentifier:BLOB:[B@22e0ef21
+	HTTP
+			Input
+					Path
+							Segment:CHARACTER:simple-app
+							Segment:CHARACTER:greet
+					QueryString
+							name:CHARACTER:Chaitanya
+
+--# Therefore the path to the query parameters is -							
+LocalEnvironment.HTTP.Input.QueryString.name
+
+--# [Step 2]
+--#  Create an assemble script that builds a bar from this application.
+--#   This will use the mqsicreatebar command.
+--# [Step 2a]
+--#  Copy the script one level higher than the application folder.
+--#  execute the '$chmod a+r assemble' command to make it executable.
+
+--# [Step 3]
+--#  Create a run script that deploys the bar to the server.
+--#   This will use the mqsideploy command.
+--# [Step 3a]
+--#  Copy the script one level higher than the application folder.
+--#  execute the $chmod a+r run command to make it executable.
